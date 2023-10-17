@@ -1,0 +1,62 @@
+
+r
+java:S1104""UMake computers a static final constant or non-public and provide accessors if needed.(ÒÕˆä8åÿÌ³1
+L
+java:S1444""/Make this "public static computers" field final(ÒÕˆä8åÿÌ³1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Üı‹îúÿÿÿÿ8æÿÌ³1
+?
+java:S2386"Make this member "protected".(öÈËøÿÿÿÿ8êÿÌ³1
+?
+java:S2386"Make this member "protected".(‰ˆ®Åüÿÿÿÿ8êÿÌ³1
+:
+java:S2386"Make this member "protected".(­¼½‘8ëÿÌ³1
+?
+java:S2386"Make this member "protected".(‘¡ÎÂÿÿÿÿÿ8ëÿÌ³1
+?
+java:S2386"Make this member "protected".(ØöÇòúÿÿÿÿ8ëÿÌ³1
+:
+java:S2386"Make this member "protected".(÷¥ÈÊ8ëÿÌ³1
+:
+java:S2386"Make this member "protected".(‘Ìú®8ëÿÌ³1
+?
+java:S2386"Make this member "protected".(Ù¦¼¢úÿÿÿÿ8ëÿÌ³1
+?
+java:S2386"Make this member "protected".(õâœäşÿÿÿÿ8ëÿÌ³1
+:
+java:S2386"Make this member "protected".(®æìá8ìÿÌ³1
+:
+java:S2386"Make this member "protected".(†ğ8ìÿÌ³1
+:
+java:S2386 "Make this member "protected".(ò€¹8ìÿÌ³1
+?
+java:S2386!"Make this member "protected".(¾ÖÁ¿üÿÿÿÿ8ìÿÌ³1
+:
+java:S2386""Make this member "protected".(ÒÕˆä8íÿÌ³1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(Ü‘ê¦8ïÿÌ³1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(öÈËøÿÿÿÿ8ğÿÌ³1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‰ˆ®Åüÿÿÿÿ8òÿÌ³1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(­¼½‘8òÿÌ³1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‘¡ÎÂÿÿÿÿÿ8òÿÌ³1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ØöÇòúÿÿÿÿ8óÿÌ³1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(÷¥ÈÊ8óÿÌ³1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(‘Ìú®8óÿÌ³1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Ù¦¼¢úÿÿÿÿ8ôÿÌ³1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(õâœäşÿÿÿÿ8ôÿÌ³1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(®æìá8ôÿÌ³1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(†ğ8ôÿÌ³1
+b
+java:S1124 "EReorder the modifiers to comply with the Java Language Specification.(ò€¹8õÿÌ³1
+g
+java:S1124!"EReorder the modifiers to comply with the Java Language Specification.(¾ÖÁ¿üÿÿÿÿ8õÿÌ³1
