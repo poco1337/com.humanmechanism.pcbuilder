@@ -1,6 +1,6 @@
 package System.Classes;
 
-public enum Processor {
+public enum Processor implements CharacteristicsProvider {
     RYZEN_7_5700X(Socket.AM4, 7799),
     RYZEN_5_5600G(Socket.AM4, 4799),
     INTEL_CORE_I5_12400F(Socket.LGA1700, 6549),
@@ -16,10 +16,11 @@ public enum Processor {
     public int getPrice() {
         return price;
     }
-    public String getSocket() {
-        return this.socket.toString();
+    public Socket getSocket() {
+        return this.socket;
     }
-    public String ToString() {
-        return this.toString() + " | Сокет: " + this.getSocket() + " | ціна: " + this.getPrice();
+    @Override
+    public String characteristicsToString() {
+        return this.toString() + " | Сокет: " + this.getSocket().toString() + " | ціна: " + this.getPrice();
     }
 }

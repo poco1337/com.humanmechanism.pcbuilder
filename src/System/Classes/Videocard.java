@@ -1,6 +1,6 @@
 package System.Classes;
 
-public enum Videocard {
+public enum Videocard implements CharacteristicsProvider{
     GEFORCERTX3060( 550, 13499, 17167) {
     },
     GEFORCERTX4060 (550, 13999, 20139),
@@ -17,5 +17,17 @@ public enum Videocard {
     }
     public int getPrice() {
         return price;
+    }
+
+    public int getNeededPower() {
+        return neededPower;
+    }
+
+    public int getPerfomance() {
+        return perfomance;
+    }
+    @Override
+    public String characteristicsToString() {
+        return this.toString() + " | потрібна потужність БП: " + this.getNeededPower() + " | бали PassMark: " +this.getPerfomance() + " | ціна: " + this.getPrice();
     }
 }

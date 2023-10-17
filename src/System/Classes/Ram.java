@@ -1,6 +1,6 @@
 package System.Classes;
 
-public enum Ram {
+public enum Ram implements CharacteristicsProvider {
     KINGSTON_FURY_BEAST(3199),
     GOODRAM_IRIDIUM_X(5700),
     CORSAIR_VENGEANCE_LPX(3199);
@@ -10,5 +10,9 @@ public enum Ram {
     }
     public int getPrice() {
         return price;
+    }
+    @Override
+    public String characteristicsToString() {
+        return this.toString() + " | ціна: " + this.getPrice();
     }
 }

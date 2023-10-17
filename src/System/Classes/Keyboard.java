@@ -1,6 +1,6 @@
 package System.Classes;
 
-public enum Keyboard {
+public enum Keyboard implements CharacteristicsProvider {
     DARK_PROJECT_ONE(ConnectionType.WIRED, 1990),
     HATOR_SKYFALL_TKL_PRO(ConnectionType.WIRELESS, 4199);
     public enum ConnectionType {
@@ -11,5 +11,13 @@ public enum Keyboard {
     private Keyboard(ConnectionType connectionType, int price) {
         this.connectionType = connectionType;
         this.price = price;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+@Override
+    public String characteristicsToString() {
+        return this.toString() + " | ціна: " + this.getPrice();
     }
 }

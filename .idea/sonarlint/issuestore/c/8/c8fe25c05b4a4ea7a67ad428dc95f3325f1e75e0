@@ -1,2 +1,4 @@
 
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËéÄ–üÿÿÿÿ
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ËéÄ–üÿÿÿÿ8¾ÒÇø²1
+a
+java:S2583"DChange this condition so that it does not always evaluate to "false"(óÒ¦º8´àÔÎ³1

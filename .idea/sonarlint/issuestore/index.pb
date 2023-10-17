@@ -1,7 +1,5 @@
 
 N
-src/System/Abstract/Price.java,4\1\41e412dac140bd49cc22b0295c8b5a624893e7e6
-N
 src/System/Classes/Socket.java,8\9\8975c5a605790d59199a96023d1ddc337544e5b4
 S
 #src/System/Classes/Motherboard.java,2\7\27a893a41462e3225c6e2b96220e3f8799b1e36d
@@ -35,3 +33,9 @@ P
  src/System/Classes/Keyboard.java,7\6\76f67b03aceef53a2c5bd6b61ada4ffde01f0a48
 M
 src/System/Classes/Mouse.java,2\2\223e712bc9feeeeeaf2111eb7548ab10096d161e
+N
+src/Menu/ListOfComponents.java,f\e\fea336811c7534b691d8ea93f79c96e1a3c9ead8
+_
+/src/System/Classes/CharacteristicsProvider.java,4\c\4c262e9c22fe5aa04e4d96d4bd152aaf80070114
+B
+src/Menu/Menu.java,1\6\167f167c2cfc2f5b662c5f75e8ecc76157d1ab01

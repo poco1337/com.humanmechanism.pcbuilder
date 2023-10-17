@@ -1,6 +1,6 @@
 package System.Classes;
 
-public enum MotherboardModel {
+public enum MotherboardModel implements CharacteristicsProvider {
     GIGABYTEB550MAORUSELITE(Socket.AM4, 3999, FormFactor.MICROATX),
     GIGABYTEB650MGAMINGXAX(Socket.AM5, 7399, FormFactor.MICROATX),
     ASUSROGSTRIXZ590EGAMING(Socket.LGA1200, 8899, FormFactor.MICROATX),
@@ -20,5 +20,13 @@ public enum MotherboardModel {
     }
     public int getPrice() {
         return price;
+    }
+    @Override
+    public String characteristicsToString() {
+        return this.toString() + " | сокет: " + this.getSocket().toString() + " | форм-фактор: " + this.getFormFactor().toString() + " | ціна: " + this.getPrice();
+    }
+
+    public FormFactor getFormFactor() {
+        return formFactor;
     }
 }

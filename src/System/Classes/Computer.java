@@ -1,7 +1,10 @@
 package System.Classes;
 
-public class Computer {
+import Menu.ListOfComponents;
 
+public class Computer implements CharacteristicsProvider {
+
+    int price;
     Motherboard motherboard;
     PowerSupply powerSupply;
     ComputerCase computerCase;
@@ -43,6 +46,23 @@ public class Computer {
             return new Computer(this);
         }
     }
+
+    public PowerSupply getPowerSupply() {
+        return powerSupply;
+    }
+
+    public PcMonitor getPcMonitor() {
+        return pcMonitor;
+    }
+
+    public Keyboard getKeyboard() {
+        return keyboard;
+    }
+
+    public Mouse getMouse() {
+        return mouse;
+    }
+
     private Computer(Computer.Builder builder) {
         this.motherboard = builder.motherboard;
         this.computerCase = builder.computerCase;
@@ -50,7 +70,28 @@ public class Computer {
         this.mouse = builder.mouse;
         this.keyboard = builder.keyboard;
         this.powerSupply = builder.powerSupply;
+        ListOfComponents.computers.add(this);
+    }
+    public ComputerCase getComputerCase() {
+        return this.computerCase;
+    }
+    public Processor getProcessor() {
+        return this.getMotherboard().getProcessor();
+    }
+    public Motherboard getMotherboard() {
+        return this.motherboard;
     }
 
+    public int getPrice() {
+        return getMotherboard().getPrice() + getComputerCase().getPrice() + getPcMonitor().getPrice() + getMouse().getPrice() + getKeyboard().getPrice()
+            + getPowerSupply().getPrice();
+    }
+
+    @Override
+    public String characteristicsToString() {
+        return toString() + " | motherboard: " + getMotherboard().toString() + " computercase: " + getComputerCase().toString()
+            + " | monitor: " + getPcMonitor().toString() + " | mouse:" + getMouse().toString() + " | клава: " + getKeyboard().toString()
+            + " | блок живлення: " + getPowerSupply().toString();
+    }
 }
 

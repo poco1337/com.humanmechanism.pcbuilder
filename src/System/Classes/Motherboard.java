@@ -1,6 +1,9 @@
 package System.Classes;
 
-public class Motherboard {
+import System.Classes.Disk.Hdd;
+import System.Classes.Disk.Ssd;
+
+public class Motherboard implements CharacteristicsProvider {
     private int price;
     final MotherboardModel model;
     Processor processor;
@@ -8,7 +11,8 @@ public class Motherboard {
     Ram ram;
     int countOfMemorySticks;
     Cooling cooling;
-    Disk disk;
+    Ssd ssdDisk;
+    Hdd hhdDisk;
     SoundCard soundCard;
     public static class Builder {
         MotherboardModel model;
@@ -17,7 +21,8 @@ public class Motherboard {
         Ram ram;
         int countOfMemorySticks;
         Cooling cooling;
-        Disk disk;
+        Ssd ssdDisk;
+        Hdd hhdDisk;
         SoundCard soundCard;
 
         public Builder motherboardModel(MotherboardModel model) {
@@ -37,12 +42,12 @@ public class Motherboard {
             return this;
         }
         public Builder countOfMemorySticks(int countOfMemorySticks) {
-            if(countOfMemorySticks <= 4) {
+            if(countOfMemorySticks <= 4 && countOfMemorySticks > 0) {
                 this.countOfMemorySticks = countOfMemorySticks;
                 return this;
             }
             else {
-                System.out.println("Плашок не повинно бути більше 4");
+                System.out.println("Плашок не повинно бути більше 4 або меньше нуля.");
                 return null;
             }
         }
@@ -50,8 +55,12 @@ public class Motherboard {
             this.cooling = cooling;
             return this;
         }
-        public Builder disk(Disk disk) {
-            this.disk = disk;
+        public Builder hdd(Hdd hdd) {
+            this.hhdDisk = hdd;
+            return this;
+        }
+        public Builder ssd(Ssd hdd) {
+            this.ssdDisk = hdd;
             return this;
         }
         public Builder soundcard(SoundCard soundCard) {
@@ -59,12 +68,38 @@ public class Motherboard {
             return this;
         }
         public Motherboard build() {
-            if(processor == null) {
-                throw new IllegalStateException("Penis");
-            }
             return new Motherboard(this);
         }
     }
+
+    public Videocard getVideocard() {
+        return videocard;
+    }
+
+    public Ram getRam() {
+        return ram;
+    }
+
+    public int getCountOfMemorySticks() {
+        return countOfMemorySticks;
+    }
+
+    public Cooling getCooling() {
+        return cooling;
+    }
+
+    public Ssd getSsdDisk() {
+        return ssdDisk;
+    }
+
+    public Hdd getHhdDisk() {
+        return hhdDisk;
+    }
+
+    public SoundCard getSoundCard() {
+        return soundCard;
+    }
+
     private Motherboard(Motherboard.Builder builder) {
         this.model = builder.model;
         this.processor = builder.processor;
@@ -72,11 +107,23 @@ public class Motherboard {
         this.ram = builder.ram;
         this.countOfMemorySticks = builder.countOfMemorySticks;
         this.cooling = builder.cooling;
-        this.disk = builder.disk;
+        this.hhdDisk = builder.hhdDisk;
+        this.ssdDisk = builder.ssdDisk;
         this.soundCard = builder.soundCard;
-        this.price = getPrice();
     }
     public int getPrice() {
-        return model.getPrice() + processor.getPrice() + videocard.getPrice() + ram.getPrice() * countOfMemorySticks + cooling.getPrice() + disk.getPrice() + soundCard.getPrice();
+        return model.getPrice() + processor.getPrice() + videocard.getPrice() + ram.getPrice() * countOfMemorySticks + cooling.getPrice() + soundCard.getPrice();
+    }
+    public Processor getProcessor() {
+        return this.processor;
+    }
+    public MotherboardModel getModel() {
+        return this.model;
+    }
+
+    @Override
+    public String characteristicsToString() {
+        return this.toString() + " | модель: " + getModel().toString() + " | процесор: " + getProcessor().toString() + getVideocard().toString()
+            + getRam().toString() + getCountOfMemorySticks() + getCooling().toString() + getHhdDisk().toString() + getSsdDisk().toString() + getSoundCard().toString();
     }
 }

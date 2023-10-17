@@ -1,6 +1,12 @@
 
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ïšÎòøÿÿÿÿ8óİŠ×±1
-a
-java:S1854"?Remove this useless assignment to local variable "motherboard".(“³ßÚşÿÿÿÿ8öİŠ×±1
+M
+java:S1128"0Remove this unused import 'System.Classes.Disk'.(§í¨æ8úìÍ³1
+V
+java:S1128"4Remove this unused import 'System.Classes.Disk.Hdd'.(¥ÑõÍüÿÿÿÿ8úìÍ³1
+Y
+java:S1128"7Remove this unused import 'System.Classes.Motherboard'.(šÍ¦×øÿÿÿÿ8úìÍ³1
+Y
+java:S1128"<Remove this unused import 'System.Classes.MotherboardModel'.(Ç¤†Î8úìÍ³1
 R
-java:S1481"0Remove this unused "motherboard" local variable.(“³ßÚşÿÿÿÿ8ùİŠ×±1
+java:S1128"5Remove this unused import 'System.Classes.Videocard'.(‹·•8úìÍ³1
